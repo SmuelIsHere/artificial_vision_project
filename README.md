@@ -21,29 +21,15 @@ The trained weights for the PAR model (`unfr_best_loss.pth`) are ignored by Git 
 
 ## How to Run
 
-Follow these simple steps to configure and execute the pipeline on your video stream:
+Follow these steps to configure and execute the pipeline:
 
-<Sequence>
-{/* Reason: L'ordine dei passaggi è fondamentale: non puoi analizzare il video prima di aver inserito il file e configurato i parametri, né puoi eseguire video_analysis.py senza aver prima generato la mappatura. */}
-  <Step title="Add the video source" subtitle="Step 1">
-    Place your target video file inside the `videos/` directory and name it exactly **`video.mp4`**.
-  </Step>
-  <Step title="Configure the project" subtitle="Step 2">
-    Open the **`config.txt`** file and set your desired configuration parameters (such as model thresholds or path settings).
-  </Step>
-  <Step title="Generate the mapping" subtitle="Step 3">
-    Run the mapping script to initialize the coordinates and system layout:
-```bash
-    python mapping.py
-    ```
-  </Step>
-  <Step title="Execute the pipeline" subtitle="Step 4">
-    Run the main analysis script to start pedestrian detection, tracking, and attribute recognition:
-```bash
-    python video_analysis.py
-    ```
-  </Step>
-  <Step title="Check the outputs" subtitle="Step 5">
-    Once processing is complete, the tracking and classification metrics will be saved directly in **`result.txt`**.
-  </Step>
-</Sequence>
+1. **Add the video source**
+   Place your target video file inside the `videos/` directory and name it exactly `video.mp4`.
+
+2. **Configure the project**
+   Open the `config.txt` file and adjust your desired configuration parameters (such as model thresholds or path settings).
+
+3. **Generate the mapping**
+   Run the mapping script to initialize the coordinates and system layout:
+   ```bash
+   python mapping.py
