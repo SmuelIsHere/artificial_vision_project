@@ -30,6 +30,12 @@ Follow these steps to configure and execute the pipeline:
    Open the `config.txt` file and adjust your desired configuration parameters (such as model thresholds or path settings).
 
 3. **Generate the mapping**
-   Run the mapping script to initialize the coordinates and system layout:
-   ```bash
-   python mapping.py
+   Run the mapping script to initialize the coordinates and system layout. Open the terminal and run:
+   `python mapping.py`
+
+4. **Execute the pipeline**
+   Run the main analysis script to start pedestrian detection, tracking, and attribute recognition:
+   `python video_analysis.py`
+
+5. **Check the outputs**
+   Once the processing is complete, you can find all the tracking and classification metrics saved directly in `result.txt`.
