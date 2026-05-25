@@ -1,0 +1,36 @@
+# BoT-SORT Configuration File
+
+# Tracker type: Using BoT-SORT as tracker
+tracker_type: botsort  # or 'bytetrack'
+
+# Threshold for high confidence track association (from 0 to 1)
+track_high_thresh: 0.7  # Increased to avoid false matches on low-confidence detections
+
+# Threshold for low confidence track association (from 0 to 1)
+track_low_thresh: 0.6  # Adjusted for better robustness in tracking
+
+# Threshold for initiating a new track when the detection doesn't match any existing tracks
+new_track_thresh: 0.7  # Lowered to allow new tracks to be created more easily
+
+# Track buffer size (higher value holds the tracks longer, but requires more memory)
+track_buffer: 50  # Increased to hold tracks for longer periods (useful in case of occlusions)
+
+# Threshold for matching tracks based on confidence score and IOU distance
+match_thresh: 0.9 # Increased to reduce incorrect track associations
+
+# Whether to fuse confidence scores and IOU distances before matching
+fuse_score: true  # Keep this True to combine the confidence score with IOU distance for better track matching
+
+# Method for calculating proximity (not yet implemented in BoT-SORT)
+gmc_method: None  # Keep as None unless you plan to implement a specific method
+
+# Threshold for proximity-based re-identification
+proximity_thresh: 0.7  # Increased for better handling of objects that are close to each other
+
+# Threshold for appearance-based re-identification (for long-term occlusions or similar-looking objects)
+appearance_thresh: 0.7  # Increased for better identification of objects in long occlusions
+
+# Re-Identification model for long-term tracking (currently, it is enabled in BoT-SORT but not supported yet)
+with_reid: true  # Keep as True to use ReID if implemented
+
+
